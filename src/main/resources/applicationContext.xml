@@ -4,10 +4,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 <!-- Using socket -->
+ <!--phan nay khong co cuq dx-->
 <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
 <property name="host" value="smtp.gmail.com" />
-<property name="username" value="teststackjava@gmail.com" />
-<property name="password" value="stackjava123" />
+<property name="username" value="khangdo0107@gmail.com" />
+<property name="password" value="hofcqnhaedkcqoct" />
 <property name="javaMailProperties">
 <props>
 <prop key="mail.smtp.auth">true</prop>
