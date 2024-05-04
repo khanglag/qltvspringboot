@@ -42,6 +42,18 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        
+        <!-- Spring Boot Starter Mail -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+        <!-- JavaMail API -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>javax.mail-api</artifactId>
+            <version>1.6.2</version> <!-- Hoặc bản phù hợp nhất với ứng dụng của bạn -->
+        </dependency>
     </dependencies>
 
     <build>
@@ -52,7 +64,7 @@
                 <configuration>
                     <!-- Main class to be executed -->
                     <start-class>com.example.qltvspringboot</start-class>
-                     <mainClass>com.example.qltvspringboot</mainClass>
+                    <mainClass>com.example.qltvspringboot</mainClass>
                     <image>
                         <builder>paketobuildpacks/builder-jammy-base:latest</builder>
                     </image>
