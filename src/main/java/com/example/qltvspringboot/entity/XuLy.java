@@ -17,7 +17,7 @@ public class XuLy {
 
     @Id
     @Column(name = "MaXL")
-    private int MaXL;
+    private Integer MaXL;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MaTV")
@@ -28,10 +28,11 @@ public class XuLy {
 
     @Column(name = "SoTien")
     private Integer soTien;
+
     public XuLy() {
     }
 
-    public XuLy(int MaXL, ThanhVien MaTV, String hinhThucXL, Integer soTien, LocalDateTime ngayXL,
+    public XuLy(Integer MaXL, ThanhVien MaTV, String hinhThucXL, Integer soTien, LocalDateTime ngayXL,
                 Integer trangThaiXL) {
         this.MaXL = MaXL;
         this.MaTV = MaTV;
@@ -49,11 +50,11 @@ public class XuLy {
         this.ngayXL = ngayXL;
     }
 
-    public int getMaXL() {
+    public Integer getMaXL() {
         return MaXL;
     }
 
-    public void setMaXL(int maXL) {
+    public void setMaXL(Integer maXL) {
         MaXL = maXL;
     }
 
@@ -88,7 +89,7 @@ public class XuLy {
     private Integer trangThaiXL;
 
 
-    public int getMaTV() {
+    public Integer getMaTV() {
         return MaTV != null ? MaTV.getMaTV() : -1;
     }
 

@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 public class ThongTinSD {
     @Id
     @Column(name = "MaTT")
-    private int MaTT;
+    private Integer MaTT;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MaTV")
@@ -38,7 +38,7 @@ public class ThongTinSD {
     public ThongTinSD() {
     }
 
-    public ThongTinSD(int MaTT, ThanhVien MaTV, ThietBi MaTB, LocalDateTime TGVao, LocalDateTime TGMuon,
+    public ThongTinSD(Integer MaTT, ThanhVien MaTV, ThietBi MaTB, LocalDateTime TGVao, LocalDateTime TGMuon,
                       LocalDateTime TGTra) {
         this.MaTT = MaTT;
         this.MaTV = MaTV;
@@ -47,11 +47,11 @@ public class ThongTinSD {
         this.TGMuon = TGMuon;
         this.TGTra = TGTra;
     }
-    public int getMaTT() {
+    public Integer getMaTT() {
         return MaTT;
     }
 
-    public void setMaTT(int maTT) {
+    public void setMaTT(Integer maTT) {
         MaTT = maTT;
     }
 
@@ -80,10 +80,10 @@ public class ThongTinSD {
     }
 
 
-    public int getMaTV() {
+    public Integer getMaTV() {
         return MaTV != null ? MaTV.getMaTV() : -1;
     }
-    public int getMaTB() {
+    public Integer getMaTB() {
         return MaTB != null ? MaTB.getMaTB() : -1;
     }
 
