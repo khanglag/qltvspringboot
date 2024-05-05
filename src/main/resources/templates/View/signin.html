@@ -39,19 +39,24 @@
         alt="image"
         class="login__bg"
       />
-      <form action="" class="login__form">
+      <form action="/checklogin" method="post" th:object="${thanhvien}" class="login__form">
         <h1 class="login__title">Đăng nhập</h1>
         <div class="login__inputs">
           <div class="login__box">
-            <input type="text" placeholder="MSSV" class="login__input" />
+            <input type="text" placeholder="MSSV" id="MSSV" class="login__input" field="*{MSSV}" Required />
             <i class="fa-solid fa-graduation-cap"></i>
           </div>
+          <div th:if="${param.mssvwrong}">
+            <div class="alert alert-info"> Your MSSV is not correct</div>
+        </div>
           <div class="login__box">
             <input
               type="password"
               placeholder="Mật khẩu"
               class="login__input"
-              id="login__input"
+              id="password"
+              field="password"
+              Required
             />
             <button
               class="btn btn__eye__nor"
@@ -67,6 +72,9 @@
             >
               <i class="fa-solid fa-eye-slash eye__blind"></i>
             </button>
+            <div th:if="${param.passwordwrong}">
+              <div class="alert alert-info"> Your password is not correct</div>
+          </div>
           </div>
         </div>
         <div class="login__fogot__password">

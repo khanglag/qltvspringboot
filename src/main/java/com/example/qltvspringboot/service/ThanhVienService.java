@@ -4,10 +4,20 @@
  */
 package com.example.qltvspringboot.service;
 
+import com.example.qltvspringboot.entity.ThanhVien;
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author MSII
  */
-public class ThanhVienService {
-    
+@Service
+public interface ThanhVienService {
+    Boolean checkMSSV(int mssv);
+
+    Boolean checkPasswordThanhVien(int mssv, String password);
+
+    ThanhVien getThanhVienByMSSV(int mssv);
+
+    ThanhVien checkThanhVienByEmail(String Email);
 }
