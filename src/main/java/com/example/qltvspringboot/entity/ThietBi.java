@@ -19,9 +19,6 @@ public class ThietBi {
     @Column(name = "MaTB")
     private Integer MaTB;
 
-     @OneToMany(fetch = FetchType.LAZY, mappedBy = "MaTB", cascade = CascadeType.ALL)
-     private List<ThongTinSD> thongTinSDs;
-
     public ThietBi() {
     }
 
