@@ -34,9 +34,9 @@ public class userController {
         System.out.println("================================================================");
         System.out.println("MSSV: " + mssv);
         System.out.println("Password: " + password);
-        // if (_thanhVienBean.getMaTV().toString().equals(mssv) &&
-        // _thanhVienBean.getPassword().equals(password))
-        // return "View/user";
+         if (_thanhVienBean.getMaTV().toString().equals(mssv) &&
+         _thanhVienBean.getPassword().equals(password))
+         return "View/user";
         if (thanhVienService.checkLogin(mssv, password)) {
             return "View/user";
         }
