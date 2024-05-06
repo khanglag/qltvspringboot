@@ -15,7 +15,7 @@ import java.util.List;
 public class ThanhVien {
     @Id
     @Column(name = "MaTV")
-    private Integer MaTV;
+    private int MaTV;
 
     @Column(name = "HoTen")
     private String HoTen;
@@ -38,11 +38,11 @@ public class ThanhVien {
     public ThanhVien() {
     }
 
-    public ThanhVien(Integer MaTV) {
+    public ThanhVien(int MaTV) {
         this.MaTV = MaTV;
     }
 
-    public ThanhVien(Integer MaTV, String HoTen, String Khoa, String Nganh, String SDT, String Password, String Email) {
+    public ThanhVien(int MaTV, String HoTen, String Khoa, String Nganh, String SDT, String Password, String Email) {
         this.MaTV = MaTV;
         this.HoTen = HoTen;
         this.Khoa = Khoa;
@@ -58,11 +58,11 @@ public class ThanhVien {
         Password = password;
     }
 
-    public Integer getMaTV() {
+    public int getMaTV() {
         return MaTV;
     }
 
-    public void setMaTV(Integer maTV) {
+    public void setMaTV(int maTV) {
         MaTV = maTV;
     }
 

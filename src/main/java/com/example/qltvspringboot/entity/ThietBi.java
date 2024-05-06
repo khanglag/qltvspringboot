@@ -17,12 +17,12 @@ public class ThietBi {
 
     @Id
     @Column(name = "MaTB")
-    private Integer MaTB;
+    private int MaTB;
 
     public ThietBi() {
     }
 
-    public ThietBi(Integer MaTB, String TenTB, String MoTaTB) {
+    public ThietBi(int MaTB, String TenTB, String MoTaTB) {
         this.MaTB = MaTB;
         this.TenTB = TenTB;
         this.MoTaTB = MoTaTB;
@@ -36,11 +36,11 @@ public class ThietBi {
         TenTB = tenTB;
     }
 
-    public Integer getMaTB() {
+    public int getMaTB() {
         return MaTB;
     }
 
-    public void setMaTB(Integer maTB) {
+    public void setMaTB(int maTB) {
         MaTB = maTB;
     }
 
