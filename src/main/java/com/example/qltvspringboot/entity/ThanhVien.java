@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -15,7 +16,15 @@ import java.util.List;
 public class ThanhVien {
     @Id
     @Column(name = "MaTV")
-    private int MaTV;
+    private Integer MaTV;
+
+     @OneToMany(fetch = FetchType.LAZY, mappedBy = "MaTV", cascade =
+     CascadeType.ALL)
+     private List<ThongTinSD> thongTinSDs;
+
+     @OneToMany(fetch = FetchType.LAZY, mappedBy = "MaTV", cascade =
+     CascadeType.ALL)
+     private List<XuLy> xulies;
 
     @Column(name = "HoTen")
     private String HoTen;
@@ -38,11 +47,11 @@ public class ThanhVien {
     public ThanhVien() {
     }
 
-    public ThanhVien(int MaTV) {
+    public ThanhVien(Integer MaTV) {
         this.MaTV = MaTV;
     }
 
-    public ThanhVien(int MaTV, String HoTen, String Khoa, String Nganh, String SDT, String Password, String Email) {
+    public ThanhVien(Integer MaTV, String HoTen, String Khoa, String Nganh, String SDT, String Password, String Email) {
         this.MaTV = MaTV;
         this.HoTen = HoTen;
         this.Khoa = Khoa;
@@ -58,11 +67,11 @@ public class ThanhVien {
         Password = password;
     }
 
-    public int getMaTV() {
+    public Integer getMaTV() {
         return MaTV;
     }
 
-    public void setMaTV(int maTV) {
+    public void setMaTV(Integer maTV) {
         MaTV = maTV;
     }
 

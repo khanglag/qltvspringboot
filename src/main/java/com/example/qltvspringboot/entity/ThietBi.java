@@ -17,12 +17,15 @@ public class ThietBi {
 
     @Id
     @Column(name = "MaTB")
-    private int MaTB;
+    private Integer MaTB;
+
+     @OneToMany(fetch = FetchType.LAZY, mappedBy = "MaTB", cascade = CascadeType.ALL)
+     private List<ThongTinSD> thongTinSDs;
 
     public ThietBi() {
     }
 
-    public ThietBi(int MaTB, String TenTB, String MoTaTB) {
+    public ThietBi(Integer MaTB, String TenTB, String MoTaTB) {
         this.MaTB = MaTB;
         this.TenTB = TenTB;
         this.MoTaTB = MoTaTB;
@@ -36,11 +39,11 @@ public class ThietBi {
         TenTB = tenTB;
     }
 
-    public int getMaTB() {
+    public Integer getMaTB() {
         return MaTB;
     }
 
-    public void setMaTB(int maTB) {
+    public void setMaTB(Integer maTB) {
         MaTB = maTB;
     }
 
