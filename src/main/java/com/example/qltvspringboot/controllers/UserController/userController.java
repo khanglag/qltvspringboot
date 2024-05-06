@@ -29,18 +29,20 @@ public class userController {
         return "View/register";
     }
 
-    @PostMapping("/checkLogin")
-    public String checkLogin(@RequestParam("MSSV") int MSSV, @RequestParam("Password") String password) {
+    // @PostMapping("checkLogin")
+    // public String checkLogin(@RequestParam("MSSV") int MSSV,
+    // @RequestParam("Password") String password) {
 
-        if ((_thanhvienbean.getMaTV() == MSSV) && _thanhvienbean.getPassword().equals(password)) {
-            System.out.println("Login successful");
-            return "View/user";
-        }
-        return "View/sign";
-    }
+    // if ((_thanhvienbean.getMaTV() == MSSV) &&
+    // _thanhvienbean.getPassword().equals(password)) {
+    // System.out.println("Login successful");
+    // return "View/user";
+    // }
+    // return "View/sign";
+    // }
 
-    @GetMapping("/signin")
-    public String logout() {
-        return "View/sign";
-    }
+    // @GetMapping("/signin")
+    // public String logout() {
+    // return "View/sign";
+    // }
 }
