@@ -20,7 +20,7 @@ public class MainApp {
         System.out.println("Sending text...");
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom("khangdo0107@gmail.com");
-        message.setTo("khangminh.do2003@gmail.com");
+        message.setTo("lehoanggiakhuong2006@gmail.com");
         message.setSubject("Subject");
         message.setText("test send gmail using spring");
 // sending message
