@@ -4,10 +4,22 @@
  */
 package com.example.qltvspringboot.service;
 
+import java.util.List;
+import com.example.qltvspringboot.entity.ThanhVien;
+import java.util.Optional;
+
 /**
  *
  * @author MSII
  */
-public class ThanhVienService {
-    
+public interface ThanhVienService {
+
+    List<ThanhVien> findAllByMSSV(List<String> mssv);
+
+    List<ThanhVien> findAll();
+
+    Optional<ThanhVien> findByMSSV(int id);
+
+    boolean checkLogin(String mssv, String password);
+
 }
