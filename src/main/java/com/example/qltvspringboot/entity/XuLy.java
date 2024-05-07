@@ -28,12 +28,10 @@ public class XuLy {
 
     @Column(name = "SoTien")
     private Integer soTien;
-
     public XuLy() {
     }
 
-    public XuLy(Integer MaXL, ThanhVien MaTV, String hinhThucXL, Integer soTien, LocalDateTime ngayXL,
-                Integer trangThaiXL) {
+    public XuLy(Integer MaXL, ThanhVien MaTV, String hinhThucXL, Integer soTien, LocalDateTime ngayXL,Integer trangThaiXL) {
         this.MaXL = MaXL;
         this.MaTV = MaTV;
         this.hinhThucXL = hinhThucXL;
