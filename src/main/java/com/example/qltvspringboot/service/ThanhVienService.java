@@ -6,20 +6,25 @@ package com.example.qltvspringboot.service;
 
 import java.util.List;
 import com.example.qltvspringboot.entity.ThanhVien;
+import com.example.qltvspringboot.repository.ThanhVienRepository;
+
 import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author MSII
  */
-public interface ThanhVienService {
+@Service
+public class ThanhVienService {
 
-    List<ThanhVien> findAllByMSSV(List<String> mssv);
+    @Autowired
+    private ThanhVienRepository thanhVienRepository;
 
-    List<ThanhVien> findAll();
-
-    Optional<ThanhVien> findByMSSV(int id);
-
-    boolean checkLogin(String mssv, String password);
-
+    public boolean checkLogin(String mssv, String password) {
+        ThanhVien thanhVien = thanhVienRepository.findByMssvAndPassword(mssv, password);
+        return thanhVien != null;
+    }
 }

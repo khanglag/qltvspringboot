@@ -18,7 +18,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface ThanhVienRepository extends CrudRepository<ThanhVien, Integer> {
-    List<ThanhVien> findAllByMSSV(List<String> mssv);
 
-    Optional<ThanhVien> findByMSSV(int id);
+    ThanhVien findByMssvAndPassword(String mssv, String password);
+
 }
